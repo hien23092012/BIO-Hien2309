@@ -1,0 +1,431 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*===== BODY =====*/
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+#background {
+  position: fixed;
+  z-index: -1;
+  height: 115vh;
+}
+
+#background img {
+  height: 100%;
+}
+/*===== CSS ALL =====*/
+
+blockquote {
+    margin: 0;
+    padding: 10px;
+    border-left: 2px solid #333;
+  }
+
+a {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px white;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 10px white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 1000;
+}
+
+.text-red {
+    color: #DF2E38;
+    text-shadow: 0 0 10px #DF2E38;;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  display: none;
+  z-index: 999;
+}
+
+.popup {
+  width: 30rem;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  border-radius: 2rem;
+  animation: fadeIn 3s;
+  box-shadow: 0 0 10px black;
+}
+
+.popup .content h1 {
+  color: black;
+  padding-top: 1rem;
+}
+
+.popup .content h4 {
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.popup .content img {
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.popup .content {
+  text-align: center;
+  padding: 2rem;
+}
+
+button {
+  padding: 10px;
+  background-color: #DF2E38;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #DF2E38;
+  color: white;
+  font-size: 20px;
+  font-weight: 1000;
+  text-shadow: 0px 0px 10px white;
+  font-family: 'Montserrat', sans-serif;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: green;
+  box-shadow: 0 0 10px green;
+}
+
+#visitorCount {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 2rem;
+}
+
+#visitorCount i {
+    margin-right: 10px;
+}
+
+/*===== LINE =====*/
+.line {
+    align-items: center;
+    padding: 1rem;
+    
+    &:before,
+    &:after {
+      height: 1.6px;
+      margin: 0 0.5em;
+    }
+  }
+  
+  
+    .one-line {
+      &:before,
+      &:after {
+        background-color: #DF2E38;
+        box-shadow: 0px 0px 3px #DF2E38;
+      }
+    }
+
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+  }
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    height: 100vh;
+    width: 90%;
+    animation: fadeIn 3s
+}
+
+/*===== PROFILE =====*/
+profile {
+    width: 30%;
+    height: 95%;
+    background-color: #040D12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 10px;
+}
+
+#name {
+    font-size: 20px;
+    padding: 2rem;
+}
+
+#desc {
+    font-size: 16px;
+}
+
+#yourinformation {
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+#yourinformation i {
+    margin-right: 1rem;
+}
+
+#yourinformation #locationInfo {
+    padding: 5px;
+}
+
+
+#yourinformation #ipAddress {
+    padding: 5px;
+}
+
+#yourinformation #dateTime {
+    padding: 5px;
+}
+
+#avatar {
+    display: flex;
+    justify-content: center;
+}
+
+#avatar img {
+    width: 20rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+#social-media {
+    text-align: center;
+}
+
+#social-media a i {
+    color: white;
+    font-size: 30px;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+#social-media a i:hover {
+    color: #DF2E38;
+    text-shadow: 0 0 10px #DF2E38;;
+    transform: scale(2);
+}
+
+#social-media a.youtube i {
+    font-size: 30px; /* Default size */
+    padding: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect to enlarge the YouTube logo */
+#social-media a.youtube i:hover {
+    transform: scale(1.5); /* Enlarges the logo */
+    color: #FF0000; /* Changes color to red */
+}
+
+/*===== MAIN =====*/
+main {
+    width: 70%;
+    height: 95%;
+    background-color: #040D12;
+    border-radius: 2rem;
+    margin: 10px;
+    padding: 1rem;
+}
+
+.main .logo {
+    width: 10rem;
+    margin: 0 auto 0 auto;
+    padding: 1rem;
+}
+
+.main .logo img {
+    width: 100%;
+}
+
+.main .main-element {
+    width: 100%;
+    height: 100%;
+}
+
+.main .main-element .main-service {
+    width: 100%;
+    height: 100%;
+}
+
+/*===== SERVICE =====*/
+#service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 6rem;
+    background-color: #0a1216;
+    margin: 1rem auto 1rem auto;
+    border-radius: 2rem;
+}
+
+#service .service-title {
+    display: flex;
+    width: 40rem;
+}
+
+#service .service-title .service-name {
+    width: 20rem;
+}
+
+#service .service-title .service-information-payment {
+    width: 20rem;
+}
+
+#service .service-logo {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+#service .service-title h1, p {
+    padding: 0 1rem 0 1rem;
+}
+
+#service .service-title .service-information-payment h2 {
+    font-size: 19px;
+}
+
+#service .service-logo img {
+    width: 5rem;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#countdown h4, h5 {
+    width: 10rem;
+    color: white;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0px 0px 10px white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+#countdown div {
+    flex-basis: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+#countdown div h4 {
+    font-size: 60px;
+}
+
+#countdown div h5 {
+    font-size: 30px;
+}
+
+/*===== RESPONSIVE =====*/
+
+@media (max-width: 1900px) {
+    body {
+        background-repeat: cover;
+        overflow-x: hidden;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .popup {
+        width: 70%;
+        margin: 0 1rem 0 1rem;
+    }
+  
+    profile {
+        width: 95%;
+        height: auto;
+    }
+
+    main {
+        width: 95%;
+        height: auto;
+        margin: 1rem;
+    }
+
+    #service {
+        flex-direction: column;
+        width: 90%;
+        height: 15rem;
+    }
+
+    #service .service-title {
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+
+    #service .service-title {
+        display: flex;
+        width: 100%;
+    }
+    
+    #service .service-title .service-name {
+        width: 100%;
+    }
+    
+    #service .service-title .service-information-payment {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #countdown {
+        flex-direction: column;
+    }
+
+    #countdown div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
